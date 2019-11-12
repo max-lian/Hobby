@@ -8,6 +8,10 @@ public class Football extends Hobby {
     String type;
     WorkFoot workFoot;
 
+    public Football(String name, Complexity complexity, float timeToLearn) {
+        super(name, complexity, timeToLearn);
+    }
+
     public Football(String name, Complexity complexity, float timeToLearn, String type, WorkFoot workFoot) {
         super(name, complexity, timeToLearn);
         this.type = type;
