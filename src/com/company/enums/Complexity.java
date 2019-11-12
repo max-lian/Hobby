@@ -1,3 +1,7 @@
 package com.company.enums;
 
-public enum Complexity{EASY,NORMAL,HARD};
+public enum Complexity{
+    EASY,
+    NORMAL,
+    HARD
+};

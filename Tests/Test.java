@@ -1,4 +1,6 @@
 import com.company.*;
+import com.company.Hobbyes.Fishing;
+import com.company.Hobbyes.Football;
 import com.company.enums.*;
 
 public class Test {

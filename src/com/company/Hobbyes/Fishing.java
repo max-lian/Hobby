@@ -1,5 +1,6 @@
-package com.company;
+package com.company.Hobbyes;
 
+import com.company.Hobby;
 import com.company.enums.Complexity;
 
 public class Fishing extends Hobby {
