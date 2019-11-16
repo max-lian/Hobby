@@ -2,7 +2,9 @@ package com.company;
 
 import com.company.enums.Complexity;
 
-public abstract class Hobby {
+import java.util.Objects;
+
+public abstract class Hobby implements Comparable<Hobby> {
     private String name;
     private Complexity complexity;
     private float timeToLearn;
@@ -43,4 +45,24 @@ public abstract class Hobby {
 
     @Override
     public abstract String toString();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Hobby hobby = (Hobby) o;
+        return Float.compare(hobby.timeToLearn, timeToLearn) == 0 &&
+                Objects.equals(name, hobby.name) &&
+                complexity == hobby.complexity;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, complexity, timeToLearn);
+    }
+
+    @Override
+    public int compareTo(Hobby o) {
+        return name.compareTo(o.name);
+    }
 }
